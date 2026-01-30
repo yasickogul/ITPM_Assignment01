@@ -5,11 +5,11 @@ test('has title', async ({ page }) => {
   await expect(page).toHaveTitle(/Online Tamil Converter | English Tamil Translation | Tamil Conversion/);
 });
 
-/* =========================
-   10 PASS (Pos_Fun)
+/* 
+   (Pos_Fun)
    Covers: greeting, question, command, negative, tense,
    mixed English, numbers/time, places, formatting.
-========================= */
+ */
 
 test('Pos_Fun_01 - Greeting: vanakkam -> வணக்கம்', async ({ page }) => {
   await page.goto('https://tamil.changathi.com/');
@@ -145,7 +145,7 @@ test('Pos_Fun_15 - Repeated word emphasis: seri seri', async ({ page }) => {
   await input.click();
   await input.fill('');
   await input.type('seri seri ');
-  await expect(input).toHaveValue(/சரி.*சரி/);
+  await expect(input).toHaveValue(/சரி சரி/);
 });
 
 test('Pos_Fun_16 - Abbreviations preserved: ID, OTP', async ({ page }) => {
@@ -313,7 +313,7 @@ test('Neg_Fun_06 - Excess punctuation: enna???!!! should not produce clean stand
   await input.click();
   await input.fill('');
   await input.type('enna???!!! ');
-  await expect(input).not.toHaveValue(/என்ன???!!!/);
+  await expect(input).not.toHaveValue(/என்ன\?+!+/);
 });
 
 test('Neg_Fun_07 - Multiple spaces formatting may not be preserved perfectly', async ({ page }) => {
