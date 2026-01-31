@@ -10,23 +10,27 @@ This is a Playwright-based test automation project for testing a **Thanglish to 
 - **10 Negative Functional Tests (Neg_Fun)**: Tests that validate expected failures, demonstrating system robustness and known limitations.
 - **Page Title Validation**: Ensures the website loads correctly with the expected title.
 
-## Test Coverage
 
-### Positive Tests (Pos_Fun)
-- Greeting conversion: `vanakkam` → `வணக்கம்`
-- Question handling: `epdi irukeenga?` → `எப்படி இருக்கீங்க`
-- Simple sentences and commands
-- Negative forms and past/future tenses
-- Mixed English terms and complex sentences
+## ✅ Automated Test Coverage Summary
 
-### Negative Tests (Neg_Fun)
-- Malformed inputs and typos
-- Missing vowels and special characters
-- Place name preservation
-- Mixed slang handling
-- Punctuation robustness
-- Multi-line and very long text input
-- Technical abbreviations
+- **24 Positive Functional Tests (Pos_Fun)**  
+  These tests validate correct system behavior for a wide range of Thanglish-to-Tamil conversion scenarios, including:
+  - Common greetings and daily expressions
+  - Interrogative (questions) and imperative (commands) forms
+  - Positive and negative sentence structures
+  - Tense variations (past, present, future)
+  - Pronoun and plural usage
+  - Mixed Thanglish + English inputs (e.g., technical terms and brand names)
+  - Numbers, time, currency, dates, and units of measurement
+  - Short (S), Medium (M), and Long (L) input lengths
+
+- **10 Negative Functional Tests (Neg_Fun)**  
+  These tests are designed to validate known limitations and robustness of the system by using inputs such as heavy typos, missing vowels, excessive punctuation, irregular spacing, slang, and mixed technical abbreviations.  
+  In these cases, the tests are expected to **PASS when the system output does NOT match the ideal expected output**, confirming that the application behaves as expected under invalid or edge-case inputs and that such limitations are correctly detected by the automated test suite.
+
+- **Page Title Validation**  
+  Ensures that the application loads successfully by verifying the presence of the expected page title before executing functional test cases.
+
 
 ## Project Structure
 
