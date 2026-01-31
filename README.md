@@ -37,7 +37,6 @@ This is a Playwright-based test automation project for testing a **Thanglish to 
 ```
 playwrite/
 ├── tests/
-│   ├── example.spec.js              # Example test file
 │   └── ThanglishToTamil.spec.js     # Main test suite
 ├── playwright.config.js              # Playwright configuration
 ├── package.json                      # Dependencies and scripts
