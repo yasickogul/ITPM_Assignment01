@@ -114,10 +114,3 @@ To add new tests:
 3. Run tests to validate
 4. Update this README if adding new test categories
 
-## License
-
-This project is part of an ITPM assignment.
-
-## Contact
-
-For questions or issues, please reach out to the project maintainer.
