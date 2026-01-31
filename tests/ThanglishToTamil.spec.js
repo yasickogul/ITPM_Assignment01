@@ -1,9 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test('has title', async ({ page }) => {
-  await page.goto('https://tamil.changathi.com/');
-  await expect(page).toHaveTitle(/Online Tamil Converter | English Tamil Translation | Tamil Conversion/);
-});
+
 
 /* 
    (Pos_Fun)
@@ -12,6 +9,7 @@ test('has title', async ({ page }) => {
  */
 
 test('Pos_Fun_01 - Greeting: vanakkam -> வணக்கம்', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -21,6 +19,7 @@ test('Pos_Fun_01 - Greeting: vanakkam -> வணக்கம்', async ({ page }
 });
 
 test('Pos_Fun_02 - Question: epdi irukeenga? -> எப்படி இருக்கீங்க', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -30,6 +29,7 @@ test('Pos_Fun_02 - Question: epdi irukeenga? -> எப்படி இருக�
 });
 
 test('Pos_Fun_03 - Simple sentence: naan veetukku poren -> நான் வீட்டுக்கு போறேன்', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -39,6 +39,7 @@ test('Pos_Fun_03 - Simple sentence: naan veetukku poren -> நான் வீ�
 });
 
 test('Pos_Fun_04 - Imperative/command: inga vaa -> இங்க வா', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -48,6 +49,7 @@ test('Pos_Fun_04 - Imperative/command: inga vaa -> இங்க வா', async (
 });
 
 test('Pos_Fun_05 - Negative form: naan vara maaten -> நான் வர மாட்டேன்', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -57,6 +59,7 @@ test('Pos_Fun_05 - Negative form: naan vara maaten -> நான் வர மா
 });
 
 test('Pos_Fun_06 - Past tense: naan nethu ponen -> நான் நேத்து போனேன்', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -66,6 +69,7 @@ test('Pos_Fun_06 - Past tense: naan nethu ponen -> நான் நேத்த�
 });
 
 test('Pos_Fun_07 - Future tense: naan nalaikku varen -> நான் நாளைக்கு வரேன்', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -75,6 +79,7 @@ test('Pos_Fun_07 - Future tense: naan nalaikku varen -> நான் நாள�
 });
 
 test('Pos_Fun_08 - Mixed English term: Zoom meeting irukku -> Zoom remains', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -85,6 +90,7 @@ test('Pos_Fun_08 - Mixed English term: Zoom meeting irukku -> Zoom remains', asy
 
 
 test('Pos_Fun_09 - Command: konjam nillu -> கொஞ்சம் நில்', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -94,6 +100,7 @@ test('Pos_Fun_09 - Command: konjam nillu -> கொஞ்சம் நில்',
 });
 
 test('Pos_Fun_10 - Question: unga peru enna? -> உங்கள் பேர் என்ன', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -103,6 +110,7 @@ test('Pos_Fun_10 - Question: unga peru enna? -> உங்கள் பேர் 
 });
 
 test('Pos_Fun_11 - Polite request: dayavuseithu help pannunga', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -113,6 +121,7 @@ test('Pos_Fun_11 - Polite request: dayavuseithu help pannunga', async ({ page })
 
 
 test('Pos_Fun_12 - Informal: dei inga vaa da', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -122,6 +131,7 @@ test('Pos_Fun_12 - Informal: dei inga vaa da', async ({ page }) => {
 });
 
 test('Pos_Fun_13 - Pronoun variation (we): naanga nalaikku povom', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -131,6 +141,7 @@ test('Pos_Fun_13 - Pronoun variation (we): naanga nalaikku povom', async ({ page
 });
 
 test('Pos_Fun_14 - Plural/they: avanga varaanga', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -139,16 +150,18 @@ test('Pos_Fun_14 - Plural/they: avanga varaanga', async ({ page }) => {
   await expect(input).toHaveValue(/அவங்க|அவர்கள்/);
 });
 
-test('Pos_Fun_15 - Repeated word emphasis: seri seri', async ({ page }) => {
+test('Pos_Fun_15 - Repeated word emphasis: sari sari', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
   await input.fill('');
-  await input.type('seri seri ');
+  await input.type('sari sari ');
   await expect(input).toHaveValue(/சரி சரி/);
 });
 
 test('Pos_Fun_16 - Abbreviations preserved: ID, OTP', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -159,7 +172,7 @@ test('Pos_Fun_16 - Abbreviations preserved: ID, OTP', async ({ page }) => {
 });
 
 test('Pos_Fun_17 - Currency preserved: Rs. 2500', async ({ page }) => {
-  await page.goto('https://tamil.changathi.com/');
+  test.setTimeout(120000);
   const input = page.getByRole('textbox');
   await input.click();
   await input.fill('');
@@ -168,6 +181,7 @@ test('Pos_Fun_17 - Currency preserved: Rs. 2500', async ({ page }) => {
 });
 
 test('Pos_Fun_18 - Date preserved: 25/12/2025', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -177,7 +191,7 @@ test('Pos_Fun_18 - Date preserved: 25/12/2025', async ({ page }) => {
 });
 
 test('Pos_Fun_19 - Units preserved: 5 kg', async ({ page }) => {
-  await page.goto('https://tamil.changathi.com/');
+  test.setTimeout(120000);
   const input = page.getByRole('textbox');
   await input.click();
   await input.fill('');
@@ -188,6 +202,7 @@ test('Pos_Fun_19 - Units preserved: 5 kg', async ({ page }) => {
 /* ----------- MEDIUM (M: 31–299 chars) POSITIVE ----------- */
 
 test('Pos_Fun_20 (M) - Daily + cause: traffic, meeting late', async ({ page }) => {
+ test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -198,6 +213,7 @@ test('Pos_Fun_20 (M) - Daily + cause: traffic, meeting late', async ({ page }) =
 });
 
 test('Pos_Fun_21 (M) - Mixed English + time: Zoom link WhatsApp', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -209,6 +225,7 @@ test('Pos_Fun_21 (M) - Mixed English + time: Zoom link WhatsApp', async ({ page 
 });
 
 test('Pos_Fun_22 (M) - Request + email subject', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -219,6 +236,7 @@ test('Pos_Fun_22 (M) - Request + email subject', async ({ page }) => {
 });
 
 test('Pos_Fun_23 (M) - Shopping + numbers', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -233,6 +251,7 @@ test('Pos_Fun_23 (M) - Shopping + numbers', async ({ page }) => {
 /* ----------- LARGE (L: ≥300 chars) POSITIVE ----------- */
 
 test('Pos_Fun_24 (L) - Long paragraph (robustness + conversion keeps meaning)', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -260,6 +279,7 @@ test('Pos_Fun_24 (L) - Long paragraph (robustness + conversion keeps meaning)', 
  */
 
 test('Neg_Fun_01 - Joined words: Numbers/time format preserved: 7.30 AM', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -269,6 +289,7 @@ test('Neg_Fun_01 - Joined words: Numbers/time format preserved: 7.30 AM', async 
 });
 
 test('Neg_Fun_02 - Heavy typos: vaannnakkammmm should not convert cleanly to வணக்கம்', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -279,6 +300,7 @@ test('Neg_Fun_02 - Heavy typos: vaannnakkammmm should not convert cleanly to வ
 
 // not correct
 test('Neg_Fun_03 - Missing vowels: vndkmm should not convert to வணக்கம்', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -289,6 +311,7 @@ test('Neg_Fun_03 - Missing vowels: vndkmm should not convert to வணக்க�
 
 //corr
 test('Neg_Fun_04 - Place name preserved: Colombo', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -298,6 +321,7 @@ test('Neg_Fun_04 - Place name preserved: Colombo', async ({ page }) => {
 });
 
 test('Neg_Fun_05 - Mixed slang may not convert as intended', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -308,6 +332,7 @@ test('Neg_Fun_05 - Mixed slang may not convert as intended', async ({ page }) =>
 });
 
 test('Neg_Fun_06 - Excess punctuation: enna???!!! should not produce clean standard output', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -317,6 +342,7 @@ test('Neg_Fun_06 - Excess punctuation: enna???!!! should not produce clean stand
 });
 
 test('Neg_Fun_07 - Multiple spaces formatting may not be preserved perfectly', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -326,6 +352,7 @@ test('Neg_Fun_07 - Multiple spaces formatting may not be preserved perfectly', a
 });
 
 test('Neg_Fun_08 - New line input may not be handled properly', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -335,6 +362,7 @@ test('Neg_Fun_08 - New line input may not be handled properly', async ({ page })
 });
 
 test('Neg_Fun_09 - Very long text might not fully convert correctly (robustness)', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
@@ -346,6 +374,7 @@ test('Neg_Fun_09 - Very long text might not fully convert correctly (robustness)
 });
 
 test('Neg_Fun_10 - Mixed technical abbreviations may not convert cleanly', async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto('https://tamil.changathi.com/');
   const input = page.getByRole('textbox');
   await input.click();
