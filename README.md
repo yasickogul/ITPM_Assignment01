@@ -64,16 +64,7 @@ npm install
 3. Install Playwright browsers:
 ```bash
 npx playwright install
-```
-### Run specific test file:
-```bash
-npx playwright test tests/ThanglishToTamil.spec.js
-```
 
-### Run with UI mode:
-```bash
-npx playwright test --ui
-```
 
 ### Run in headed mode (see browser):
 ```bash
